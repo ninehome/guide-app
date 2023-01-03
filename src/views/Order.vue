@@ -21,7 +21,7 @@
       <van-tab title="Tumblr名人" name="5"></van-tab>
       <van-tab title="Instagram名人" name="6"></van-tab>
     </van-tabs>
-    
+
 
       <van-list>
         <div v-for="(item, index) in list" :key="index" class="order-item-box" @click="goTo(item.redirectUrl)">
