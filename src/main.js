@@ -11,12 +11,11 @@ import Vue from "vue";
 import md5 from "js-md5";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
+
 import { prefix } from "@/common/js/utils";
 import { Lazyload } from 'vant';
-// import VueLazyLoad from 'vue-lazyload'
-// 导入mockjs
-import    '@/mock/index.js'
+
+
 
 import {
   Divider,
@@ -98,7 +97,6 @@ Vue.use(Lazyload, {
 // })
 new Vue({
   router,
-  store,
   render: (h) => h(App),
 }).$mount("#app");
 

@@ -4,16 +4,15 @@
   <div >
     <div>
       <header class="simple-header">
-        <img src="">
+        <img style=";height: 30px" :src="this.imglogo">
         <div class="simple-header-name"></div>
-        <i></i>
+        <img style="width:30px ;height: 30px" :src="this.seriveLogo">
       </header>
     </div>
 
     <swiper :list="swiperList"></swiper>
 
-    <van-tabs @change="onChangeTab"    :color="'#ee4d2d'" :title-active-color="'#ff7337'" class="order-tab"
-              v-model="status">
+    <van-tabs @change="onChangeTab"    :color="'#ee4d2d'" :title-active-color="'#ff7337'" class="order-tab">
       <van-tab title="WEB推荐" name='0'></van-tab>
       <van-tab title="APP推荐" name="1"></van-tab>
       <van-tab title="VPN工具" name="2"></van-tab>
@@ -22,15 +21,12 @@
       <van-tab title="Tumblr名人" name="5"></van-tab>
       <van-tab title="Instagram名人" name="6"></van-tab>
     </van-tabs>
+    
 
-
-
-      <van-list  >
+      <van-list>
         <div v-for="(item, index) in list" :key="index" class="order-item-box" @click="goTo(item.redirectUrl)">
-
           <div class="card-item">
             <van-image class="img_card" :src="item.goodsCoverImg"  alt="" @click="goTo(item.redirectUrl)" radius ="5px"/>
-
             <div class="img-right-txt">
               <span style="color: #232326">{{ item.goodsName }}</span>
               <span>{{ item.goodDsc }}</span>
@@ -39,6 +35,7 @@
 
 
         </div>
+
       </van-list>
 
 
@@ -50,18 +47,18 @@
 
 <script>
 import axios from "axios";
-import {formatNum} from '../service/number'
+
 import swiper from '@/components/Swiper'
 export default {
   data() {
     return {
-      formatNum:formatNum,
-      status: '',
+
       loading: false,
       finished: false,
       refreshing: false,
       list:[],
-
+      imglogo:require("../assets/left_logo.png"),
+      seriveLogo:require("../assets/service.png"),
       list0: [
         {
 
@@ -413,8 +410,6 @@ export default {
   },
   async mounted() {
     // this.onLoad()
-    this.symbol = this.$store.state.Symbols
-
     this.onChangeTab("0","")
     // this.getListData()
   },
@@ -440,9 +435,6 @@ export default {
 
 
     onChangeTab(name, title) {
-      console.log(1111111111111)
-      console.log(title)
-      console.log(name)
       this.list = []
       this.list.push(this.list0)
 
@@ -484,6 +476,7 @@ export default {
 
   .simple-header {
     position: fixed;
+    align-items: center;
     top: 0;
     left: 0;
     z-index: 10000;
@@ -492,8 +485,8 @@ export default {
     line-height: 44px;
     padding: 0 10px;
     .boxSizing();
-    color: #252525;
-    background: #252525;
+    color: #333333;
+    background: #333333;
 
     //.simple-header-name {
     //  font-size: 14px;
