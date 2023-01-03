@@ -1,0 +1,39 @@
+
+
+
+//图片加载使用缓存
+https://blog.csdn.net/qq_41589917/article/details/107317324
+
+1.安装插件
+ npm install vue-lazyload --save-dev
+
+
+2.
+main.js
+import VueLazyLoad from 'vue-lazyload'
+Vue.use(VueLazyLoad,{
+    error:'./static/error.png',   //图片加载失败显示的图片
+    loading:'./static/loading.gif'// 图片加载中显示的图片
+})
+
+
+
+3.图片显示
+
+
+
+ <div v-for="(item, index) in list" :key="index" class="icon-item">
+ <img v-lazy="gg(item.iconUrl)">
+ </div>
+
+ methods: {
+        // 加图片时间戳的作用是在页面刷新之后使浏览器不使用缓存图片
+        gg: function (g) {
+          return g + '?t=' + new Date().getTime()
+           }
+        }
+
+
+
+
+https://kc1fpi.axshare.com

@@ -1,0 +1,48 @@
+[
+      {
+
+        "goodsId": 1,
+        "goodsName": "我是标题",
+        "goodsCoverImg": "../assets/img/banner3.jpg",
+        "orderId": 1,
+        "orderNo": "1",
+        "goodDsc": "我是副标题",
+        "redirectUrl":"https://google.com"
+
+
+      },
+      {
+
+        "goodsId": 1,
+        "goodsName": "我是标题",
+        "goodsCoverImg": "../assets/img/banner3.jpg",
+        "orderId": 2,
+        "orderNo": "2",
+        "goodDsc": "我是副标题",
+        "redirectUrl":"https://google.com"
+
+      },
+      {
+
+        "goodsId": 1,
+        "goodsName": "我是标题",
+        "goodsCoverImg": "http://wildberries.win/57.jpg",
+        "orderId": 3,
+        "orderNo": "3",
+        "goodDsc": "我是副标题",
+        "redirectUrl":"https://google.com"
+
+      },
+      {
+
+        "goodsId": 1,
+        "goodsName": "我是标题",
+        "goodsCoverImg": "http://wildberries.win/57.jpg",
+        "orderId": 4,
+        "orderNo": "4",
+        "goodDsc": "我是副标题",
+        "redirectUrl":"https://google.com"
+
+      }
+]
+
